@@ -15,7 +15,7 @@ const CourseSection = () => {
         Discover out top-rated coureses across various categories. From coding
         to blah blah blah
       </p>
-      <div>
+      <div className="grid grid-cols-auto px-4 my-10 gap-4 md:my-16">
         {allCourses.slice(0, 4).map((course, index) => {
           return <CourseCard course={course} key={index} />;
         })}
