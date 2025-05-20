@@ -28,7 +28,7 @@ const SearchBar = ({ data }) => {
       <input
         type="text"
         placeholder="Search for courses"
-        className="w-full h-fuill outline-none text-gray-500/10"
+        className="w-full h-full outline-none text-gray-500/70"
         onChange={handleChange}
       />
       <button
