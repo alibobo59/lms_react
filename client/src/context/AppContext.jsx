@@ -11,6 +11,7 @@ export const AppContextProvider = (props) => {
   const currency = import.meta.env.VITE_CURRENCY || "$";
   const [allCourses, setAllCourses] = useState([]);
   const [isEducator, setIsEducator] = useState(true);
+  const [enrolledCourses, setEnrolledCourses] = useState([]);
 
   const navigate = useNavigate();
 
@@ -63,11 +64,18 @@ export const AppContextProvider = (props) => {
     });
     return numberOfLectures;
   };
+
+  //Fetch user Enrolled Courses
+  const fetchUserEnrolledCourses = async () => {
+    setEnrolledCourses(dummyCourses);
+  };
   useEffect(() => {
     fetchAllCourses();
+    fetchUserEnrolledCourses();
   }, []); // Empty dependency array means this runs once on mount
 
   const value = {
+    enrolledCourses,
     calculateLectureDuration,
     calculateNumberOfLectures,
     calculateCourseDuration,

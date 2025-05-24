@@ -24,20 +24,20 @@ const CourseDetail = () => {
     calculateCourseDuration,
     currency,
   } = useContext(AppContext);
-  console.log("courseData", courseData);
-  console.log("allCourses", allCourses);
+  // console.log("courseData", courseData);
+  // console.log("allCourses", allCourses);
 
   const fetchCourseData = async () => {
     const foundCourse = allCourses.find((course) => course.id === id);
     if (foundCourse) {
-      console.log("foundCourse", foundCourse);
+      // console.log("foundCourse", foundCourse);
       setCourseData(foundCourse);
     }
   };
 
   useEffect(() => {
     fetchCourseData();
-  }, []);
+  }, [allCourses]);
 
   const toggleSection = (index) => {
     setOpenSections((prev) => {
