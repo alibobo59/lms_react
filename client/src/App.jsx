@@ -11,6 +11,7 @@ import AddCourse from "./pages/educator/AddCourse";
 import StudentEnrolled from "./pages/educator/StudentEnrolled";
 import Dashboard from "./pages/educator/Dashboard"; // Matches corrected file name
 import Navbar from "./components/student/Navbar";
+import Educator from "./pages/educator/Educator";
 
 const App = () => {
   const isEducatorRoute = useMatch("/educator/*");
@@ -26,7 +27,7 @@ const App = () => {
         <Route path="/my-enrollments" element={<MyEnrollments />} />
         <Route path="/loading/:path" element={<Loading />} />
         {/* educator path */}
-        <Route path="/educator" element={<Dashboard />}>
+        <Route path="/educator" element={<Educator />}>
           <Route index element={<Dashboard />} />
           <Route path="add-course" element={<AddCourse />} />
           <Route path="my-courses" element={<MyCourses />} />

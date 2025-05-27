@@ -9,6 +9,7 @@ const Navbar = () => {
   const isCourseListPage = location.pathname.includes("/course-list");
   const { openSignIn } = useClerk();
   const { user } = useUser();
+  // console.log(user);
 
   return (
     <div
