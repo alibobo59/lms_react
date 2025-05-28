@@ -12,6 +12,7 @@ import StudentEnrolled from "./pages/educator/StudentEnrolled";
 import Dashboard from "./pages/educator/Dashboard"; // Matches corrected file name
 import Navbar from "./components/student/Navbar";
 import Educator from "./pages/educator/Educator";
+import "quill/dist/quill.snow.css";
 
 const App = () => {
   const isEducatorRoute = useMatch("/educator/*");
